@@ -36,7 +36,8 @@ class LinkedList {
     }
 }
 
-function mergeTwoSortedLists(list1, list2) {
+// Function for merging two Linked Lists & sort them
+function mergeLinkedLists(list1, list2) {
     let dummy = new Node(0);
     let tail = dummy;
 
@@ -65,7 +66,8 @@ function mergeTwoSortedLists(list1, list2) {
     return mergedList;
 }
 
-function deleteNthFromEnd(list, n) {
+// Function for deleting N-th Node starting from the End
+function deleteEndN(list, n) {
     let dummy = new Node(0);
     dummy.next = list.head;
     let first = dummy;
@@ -91,6 +93,8 @@ function deleteNthFromEnd(list, n) {
     return newList;
 }
 
+// Problem 1: Merge Two Sorted Linked Lists
+
 console.log(" ");
 console.log("Merge Two Sorted Linked Lists:");
 console.log("----- ----- ----- -----");
@@ -113,13 +117,15 @@ console.log("List 2:");
 list2.printList();
 console.log(" ");
 
-let mergedList = mergeTwoSortedLists(list1, list2);
+let mergedList = mergeLinkedLists(list1, list2);
 console.log("Merged Lists:");
 mergedList.printList(); 
 console.log(" ");
 
+// Problem 2: Delete the N-th Node from the End:
+
 console.log(" ");
-console.log("Delete the N-th Node from the End: ");
+console.log("Delete the N-th Node from the End:");
 console.log("----- ----- ----- -----");
 
 let newList = new LinkedList();
@@ -134,8 +140,7 @@ newList.printList();
 
 console.log(" ");
 
-
-let updatedNewList = deleteNthFromEnd(newList, 2);
+let updatedNewList = deleteEndN(newList, 2);
 console.log("Updated List after deleting 2nd from end:");
 updatedNewList.printList();
 console.log(" ");
