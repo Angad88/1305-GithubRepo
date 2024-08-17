@@ -1,4 +1,4 @@
-// Question 4 Code
+// Question 4 3
 
 function Question4ArrayDuplicate(theArray) {
     let lowestNum
