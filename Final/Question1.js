@@ -1,4 +1,4 @@
-// Question 1 3
+// Question 1 
 
 function Question1Reversing(k) {
     let NegativeCheck;

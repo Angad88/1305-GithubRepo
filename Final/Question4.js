@@ -1,4 +1,4 @@
-// Question 4 3
+// Question 4 
 
 function Question4ArrayDuplicate(theArray) {
     let lowestNum
