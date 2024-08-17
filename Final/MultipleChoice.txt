@@ -1,0 +1,6 @@
+
+B (Binray Search)
+A (O(1))
+B (Smaller than the node)
+C (In-order)
+B (Null)
