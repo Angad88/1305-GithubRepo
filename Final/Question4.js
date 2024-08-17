@@ -1,35 +1,31 @@
 // Question 4 
 
 function Question4ArrayDuplicate(theArray) {
-    let lowestNum
-    lowestNum = Infinity;
-
-    let howOften
-    howOften = {};
-
-    
-    for (let n of theArray) {
-        if (howOften[n]) {
-            lowestNum = Math.min(lowestNum, n);
-        } else {
-            howOften[n] = 1;
-        }
+    let arrayX;
+    let output
+    arrayX= new Array(theArray.length+1).fill(0)
+    for(let x of theArray){
+        arrayX[x]++
     }
-    return lowestNum;
+    output=[]
+    for(let i=0;i<arrayX.length;i++){
+        if(arrayX[i]==2)output.push(i)
+    }
+    return output
 }
 
 let testArray1;
-let smallestDuplicate1;
+let Duplicate1;
 testArray1 = [4, 10, 5, 1, 11, 5, 1, 4, 1]
 smallestDuplicate1 = Question4ArrayDuplicate(testArray1);
 
 let testArray2;
-let smallestDuplicate2;
+let Duplicate2;
 testArray2 = [1, 10, 1, -1, 10, -1]
 smallestDuplicate2 = Question4ArrayDuplicate(testArray2);
 
 console.log(`First Array: [${testArray1}]`)
-console.log(`Smallest Duplicate found in First Array: ${smallestDuplicate1}`)
+console.log(`Duplicates found in First Array: ${smallestDuplicate1}`)
 
 console.log(`First Array: [${testArray2}]`)
-console.log(`Smallest Duplicate found in First Array: ${smallestDuplicate2}`)
+console.log(`Duplicates found in First Array: ${smallestDuplicate2}`)

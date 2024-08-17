@@ -1,17 +1,25 @@
 // Question 1 
 
-function Question1Reversing(k) {
-    let NegativeCheck;
-    if (k < 0) {
-        NegativeCheck = -1;
-    }   
-    else {
-        NegativeCheck = 1;
+function Question1Reversing(x) {
+    let b;
+    let reversed;
+    let output;
+    let checkNegative;
+
+    b = Math.pow(2,31) - 1   
+
+    reversed= x.toString().split('').reverse().join('') 
+
+    output = parseInt(reversed)
+
+    checkNegative = 1;
+
+    if( x < 0 ){
+        checkNegative = -1;
     }
-    let NumberReversed;
-    
-    NumberReversed = parseInt(Math.abs(k).toString().split('').reverse().join('')) * NegativeCheck;
-    return NumberReversed;
+
+    output *= checkNegative;
+    return output;
 }
 
 let testNumber1;
